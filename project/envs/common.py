@@ -36,7 +36,12 @@ CACHES = {
     }
 }
 
-ALLOWED_HOSTS = ["coffeehouses-staging.herokuapp.com", "coffeehouses.herokuapp.com"]
+ALLOWED_HOSTS = [
+    "coffeehouses-staging.herokuapp.com",
+    "coffeehouses.herokuapp.com",
+    "coffeehous.es",
+    "*.coffeehous.es",
+]
 
 TIME_ZONE = 'America/Vancouver'
 
