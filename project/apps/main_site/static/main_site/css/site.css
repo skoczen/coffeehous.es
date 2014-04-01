@@ -1,0 +1,30 @@
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+/*
+Headers:;
+font-family: 'Special Elite', cursive;
+font-family: 'IM Fell English SC', serif;
+
+Body
+font-family: 'Average', serif;
+font-family: 'Amethysta', serif;
+font-family: 'Jacques Francois', serif;
+*/
+
+body {
+    font-family: 'Average', serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Special Elite', serif;
+}

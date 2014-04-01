@@ -1,0 +1,31 @@
+{% extends "base.html" %}{% load compress %}
+
+{% block css %}{{block.super}}
+{% compress css %}
+<link rel="stylesheet" href="{{STATIC_URL}}main_site/css/fonts.css">
+<link rel="stylesheet" href="{{STATIC_URL}}main_site/css/site.css">
+{% endcompress %}
+{% endblock %}
+
+{% block js %}{{block.super}}
+{% compress js %}
+<script src="{{STATIC_URL}}main_site/js/site.js"></script>
+{% endcompress %}
+{% endblock %}
+
+
+{% block content %}
+<div class="home_page">
+    <h1>Coffeehous.es is a place of ideas.</hi>
+
+    <p>Would you rather read a cool science article/discuss a piece of art/think about how tech changes globalization/understand a law of physics than watch tv?  Have you wanted to talk about smart stuff with your friends and colleagues, and not have it be overrun with random shit from people you barely know?</p>
+
+    <p>Coffeehouses might be for you.</p>
+
+    <p>Coffeehous.es is a bit like reddit, but with the smart people you actually know.  It lets us share ideas, get inspired and informed by people we know and trust - and to have conversations.</p>
+
+    <p>Its inspiration is the <a href="http://en.wikipedia.org/wiki/Coffeehouse" target="_blank">original coffeehouses</a> in Europe in the 1600s, where much of the scientific revolution and cultural enlightenement took place.  We have the internet now.  It's time to bring all our ideas together again.</p>
+
+    <p>Getting into coffeehous.es is simple - just find someone who's already in.</p>
+
+{% endblock %}
