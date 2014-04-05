@@ -1,0 +1,52 @@
+{% extends "base.html" %}{% load compress %}
+
+{% block css %}{{block.super}}
+{% compress css %}
+<link rel="stylesheet" href="{{STATIC_URL}}main_site/css/fonts.css">
+<link rel="stylesheet" href="{{STATIC_URL}}main_site/css/site.css">
+{% endcompress %}
+{% endblock %}
+
+{% block js %}{{block.super}}
+{% compress js %}
+<script src="{{STATIC_URL}}main_site/js/site.js"></script>
+{% endcompress %}
+{% endblock %}
+
+
+{% block full_body %}
+<div class="article_page">
+    {# <h1>Coffeehous.es is a place <br/>of <b>conversations</b><br/> and <b>ideas</b>.</h1> #}
+
+<div class="bubble article">
+    <div class="thumb_and_link">
+        <div class="thumb">
+            <img src="http://webthumb.bluga.net/data/37/0f/db/wt533f86adb0f37-thumb_medium.jpg" />
+        </div>
+        <div class="url">
+            <a href="http://www.mindbodygreen.com/0-13042/6-tips-to-get-motivated-when-youre-feeling-depressed.html" target="_blank">www.mindbodygreen.com/...</a>
+        </div>
+    </div>
+    <div class="info">
+        <div class="title">6 genuinely useful techniques to help with depression.</div>
+        <div class="summary">As a lot of the people close to me know, I'm in a prolonged war with depression. This article is one of the first I've seen with really genuinely helpful advice. Cool if you or somebody you know also fights with it.</div>
+        
+    </div>
+</div>
+
+<div class="bubble comments right_side floating">
+    <div class="comment">
+        <div class="author" style="background-image: url('{{ STATIC_URL }}main_site/img/seriina.png');"></div>
+        <div class="substance">Wow, that's different than I would have expected. I've always wondered.. do people who are depressed know that they're in that spot, and to take these steps?</div>
+    </div>
+    <div class="comment">
+        <div class="author" style="background-image: url('{{ STATIC_URL }}main_site/img/steven.jpg');"></div>
+        <div class="substance">Awesome question. For me, that's probably the hardest part, actually. Dunno if that's everyone - anyone else want to chime in?</div>
+    </div>
+    <a class="button">Add your voice</a>
+</div>
+
+<div class="new_conversation">
+    <a class="button">Start a new conversation</a>
+</div>
+{% endblock %}
