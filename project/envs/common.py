@@ -41,6 +41,7 @@ ALLOWED_HOSTS = [
     "coffeehouses.herokuapp.com",
     "coffeehous.es",
     "*.coffeehous.es",
+    "www.coffeehous.es",
 ]
 
 TIME_ZONE = 'America/Vancouver'
