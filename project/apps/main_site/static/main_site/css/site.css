@@ -28,9 +28,11 @@ font-family: 'PT Sans Caption', serif;
 
 body {
     font-family: 'Average', serif;
-    background: url("../../main_site/img/wood-background-1.jpg");
-    background-size: cover;
-
+    background: url("../../main_site/img/wood-background-1.jpg") no-repeat center center fixed;;
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Special Elite', serif;
