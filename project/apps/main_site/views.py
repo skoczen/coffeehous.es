@@ -7,3 +7,7 @@ def home(request):
 @render_to("main_site/ui-mock.html")
 def ui_mock(request):
     return locals()
+
+@render_to("main_site/detail-mock.html")
+def detail_mock(request):
+    return locals()

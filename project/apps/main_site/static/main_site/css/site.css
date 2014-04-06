@@ -36,6 +36,18 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Special Elite', serif;
 }
 
+nav {
+
+}
+nav .logo {
+    background: url("../../main_site/img/logo.png");
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
 .home_page h1 { 
     text-align: right;
     margin: 80px auto 20px auto;
@@ -52,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto 1em auto;
 }
 .bubble {
+    display: block;
     width: 80%;
     max-width: 800px;
 
@@ -149,4 +162,94 @@ h1, h2, h3, h4, h5, h6 {
 .new_conversation {
     margin-left: 5%;
     margin-top: 5%;
+}
+
+
+.ideas {
+    width: 70%;
+    margin-left: 5%;
+}
+.overheard {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+}
+.ideas h1 {
+    color: #000;
+}
+.ideas .bubble {
+    padding: 10px;
+    margin: 0 0 25px 0;
+    color: #000;
+}
+
+.ideas .bubble.idea {
+    position: relative;
+    overflow: auto;
+    text-decoration: none;
+}
+.ideas .bubble.idea .thumb_and_link {
+    float: left;
+    width: 180px;
+    padding: 0px;
+}
+.ideas .bubble.idea .thumb_and_link .url {
+    font-family: Arial, sans-serif;
+    display: block;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px 2px;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.ideas .bubble.idea .thumb_and_link .url a{
+    /*color: #FFF;*/
+    
+}
+.ideas .bubble.idea .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222;
+}
+.ideas .bubble.idea .info {
+    margin-left: 180px;
+    padding: 0 10px;
+    color: #454545;
+}
+.overheard .comment.bubble.recent {
+    opacity: 0.7;
+}
+.overheard .comment.bubble {
+    position: relative;
+    padding: 10px;
+    width: 90%;
+    margin: 10px 0 10px 0;
+    cursor: default;
+
+    opacity: 0.3;
+    border: none;
+}
+.overheard .comment.bubble:hover {
+
+    opacity: 1;
+    -webkit-transition: opacity 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.5s;
+}
+.fancy_quote {
+    font-size: 40px;
+    color: #CCC;
+}
+.fancy_quote.left {
+    float: left;
+    margin: 10px 5px 0 0;
+    left: 10px;
+    line-height: 10px;
+}
+.fancy_quote.right {
+    position: absolute;
+    bottom: -0.7em;
+    right: 10px;
 }
