@@ -1,0 +1,155 @@
+{% extends "base.html" %}{% load compress %}
+
+{% block css %}{{block.super}}
+{% compress css %}
+<link rel="stylesheet" href="{{STATIC_URL}}main_site/css/fonts.css">
+<link rel="stylesheet" href="{{STATIC_URL}}main_site/css/site.css">
+{% endcompress %}
+{% endblock %}
+
+{% block js %}{{block.super}}
+{% compress js %}
+<script src="{{STATIC_URL}}main_site/js/site.js"></script>
+{% endcompress %}
+{% endblock %}
+
+<!--
+crows study
+http://www.sciencedaily.com/releases/2014/03/140326182039.htm
+http://webthumb.bluga.net/data/43/59/40/wt5340955405943-thumb_medium.jpg
+
+beacon article on kenya
+http://www.beaconreader.com/andrea-dijkstra/farming-in-kenya-becomes-sexy
+http://webthumb.bluga.net/data/f9/ea/0e/wt53409580eeaf9-thumb_medium.jpg
+
+rick rubin article
+http://www.newsweek.com/2013/06/26/rick-rubin-crashing-kanyes-album-15-days-237646.html
+http://webthumb.bluga.net/data/34/23/c3/wt534095ac32334-thumb_medium.jpg
+
+study on inflationary policy?
+http://time.com/49010/republicans-want-us-to-be-europe/
+http://webthumb.bluga.net/data/5f/86/d4/wt534095cd4865f-thumb_medium.jpg
+
+minute physics
+https://www.youtube.com/watch?v=1pfqIcSydgE&list=TLjVJPEdalIH6hAW4mi9VuR-nKrKZhsm9_
+http://webthumb.bluga.net/data/25/18/0a/wt534095f0a1825-thumb_medium.jpg
+
+sparkfile - 
+https://medium.com/p/8d6e7df7ae58
+http://webthumb.bluga.net/data/1c/36/c8/wt5340960c8361c-thumb_medium.jpg
+
+elizabeth gilbert
+
+ -->
+
+{% block full_body %}
+<nav style="display: none;">
+    <a href="{% url "main_site:home" %}" class="logo">Home</a>
+    <a href="{% url "main_site:home" %}" class="logo">My Conversations</a>
+    <a class="button">Add an idea</a>
+    <a href="{% url "main_site:home" %}" class="logo">(3)</a>
+    <a href="{% url "main_site:home" %}" class="logo">Account</a>
+</nav>
+
+<div class="dashboard">
+
+<div class="ideas">
+    <h1>Ideas</h1>
+    <a href="{% url "main_site:detail_mock" %}" class="bubble idea">
+        <div class="thumb_and_link">
+            <div class="thumb">
+                <img src="http://webthumb.bluga.net/data/f9/ea/0e/wt53409580eeaf9-thumb_medium.jpg" />
+            </div>
+        </div>
+        <div class="info">
+            <div class="title">Kenyan college grads are going into farming - with iPads.</div>
+            <div class="summary">The job market and the abilty of tech to dramatically increase farm output are making some college grads in Kenya go into farming instead of traditional post-college careers.  Really tightly integrated farms, too!</div>
+        </div>
+    </a>
+    <a href="{% url "main_site:detail_mock" %}" class="bubble idea">
+        <div class="thumb_and_link">
+            <div class="thumb">
+                <img src="http://webthumb.bluga.net/data/34/23/c3/wt534095ac32334-thumb_medium.jpg" />
+            </div>
+        </div>
+        <div class="info">
+            <div class="title">Rick Rubin + Kanye West + 15 days = epic album.</div>
+            <div class="summary">Great intro to Rick Rubin if you haven't heard of him already, as well as a how-it-happened of last year's acclaimed Kanye album.</div>
+        </div>
+    </a>
+    <a href="{% url "main_site:detail_mock" %}" class="bubble idea">
+        <div class="thumb_and_link">
+            <div class="thumb">
+                <img src="http://webthumb.bluga.net/data/5f/86/d4/wt534095cd4865f-thumb_medium.jpg" />
+            </div>
+        </div>
+        <div class="info">
+            <div class="title">Economic policy for the Great Recession - what worked.</div>
+            <div class="summary">Looks at policies and what worked in the EU vs the U.S. after the recession. Please ignore the political flamebait in the article, but I found it really useful in understanding <i>what</i> economic policies both implemented to deal with the recession, and how they've worked.</div>
+        </div>
+    </a>
+    <a href="{% url "main_site:detail_mock" %}" class="bubble idea">
+        <div class="thumb_and_link">
+            <div class="thumb">
+                <img src="http://webthumb.bluga.net/data/25/18/0a/wt534095f0a1825-thumb_medium.jpg" />
+            </div>
+        </div>
+        <div class="info">
+            <div class="title">Raining? Don't want to get wet? Run.</div>
+            <div class="summary">Minute Physics does the math, and proves it.  Logic + Math = awesome.</div>
+        </div>
+    </a>
+    <a href="{% url "main_site:detail_mock" %}" class="bubble idea">
+        <div class="thumb_and_link">
+            <div class="thumb">
+                <img src="http://webthumb.bluga.net/data/1c/36/c8/wt5340960c8361c-thumb_medium.jpg" />
+            </div>
+        </div>
+        <div class="info">
+            <div class="title">"Sparkfile" as a brainstorming / writing tool.</div>
+            <div class="summary">Professional writer describes his "sparkfile" technique - have one file for all your ideas that you re-read through every few months.</div>
+        </div>
+    </a>
+    <a href="{% url "main_site:detail_mock" %}" class="bubble idea">
+        <div class="thumb_and_link">
+            <div class="thumb">
+                <img src="http://webthumb.bluga.net/data/43/59/40/wt5340955405943-thumb_medium.jpg" />
+            </div>
+        </div>
+        <div class="info">
+            <div class="title">Crows equal to 5-7 year olds at displacement reasoning.</div>
+            <div class="summary">Awesome article coming out of Princeton - crows are tasked with dropping stones into one of two tubes to get a treat, and have to reason about the stone's displacement. </div>
+        </div>
+    </a>
+    <a href="{% url "main_site:detail_mock" %}" class="bubble idea">
+        <div class="thumb_and_link">
+            <div class="thumb">
+                <img src="http://webthumb.bluga.net/data/37/0f/db/wt533f86adb0f37-thumb_medium.jpg" />
+            </div>
+        </div>
+        <div class="info">
+            <div class="title">Genuinely useful techniques to help with depression.</div>
+            <div class="summary">As a lot of the people close to me know, I'm in a prolonged war with depression. This article is one of the first I've seen with really genuinely helpful advice. Cool if you or somebody you know also fights with it.</div>
+        </div>
+    </a>
+</div>
+
+<div class="overheard">
+    <h1>Overheard</h1>
+    <div class="comment bubble recent">
+        <div class="substance"><span class="fancy_quote left">&ldquo;</span>Digging in, the interesting bit for me was the success of the fifth but not fourth test.  That and some concerns down in the discussion that the crows might have failed because unlike people, they can't see the entire apparatus *and* interact with it at the same time.  Kinda opens your mind on how many of our cognitive assumptions are based on our biological setup. <span class="fancy_quote right">&rdquo;</span></div>
+    </div>
+    <div class="comment bubble recent">
+        <div class="substance"><span class="fancy_quote left">&ldquo;</span>Ooor, umbrella.  But seriously, love the detail in this.  Wonder if you flipped it around - if you were in the middle of the desert, 5 miles from sure water, should you walk or run? <span class="fancy_quote right">&rdquo;</span></div>
+    </div>
+    <div class="comment bubble">
+        <div class="substance"><span class="fancy_quote left">&ldquo;</span>Never thought to try this - worth a shot for a month. It reminds me of a TED talk on journaling, lemme dig that up. <span class="fancy_quote right">&rdquo;</span></div>
+    </div>
+    <div class="comment bubble">
+        <div class="substance"><span class="fancy_quote left">&ldquo;</span>The Johnny Cash work was great, but kinda obvious, you know? <span class="fancy_quote right">&rdquo;</span></div>
+    </div>
+    <div class="comment bubble">
+        <div class="substance"><span class="fancy_quote left">&ldquo;</span>Wow, that's different than I would have expected. I've always wondered.. do people who are depressed know that they're in that spot, and to take these steps? <span class="fancy_quote right">&rdquo;</span></div>
+    </div>
+</div>
+{% endblock %}
