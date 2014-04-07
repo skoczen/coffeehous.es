@@ -26,14 +26,24 @@ font-family: 'Open Sans', serif;
 font-family: 'PT Sans Caption', serif;
 */
 
-body {
+html {
     font-family: 'Average', serif;
-    background: url("../../main_site/img/wood-background-1.jpg") no-repeat center center fixed;;
+    background: url("../../main_site/img/wood-background-1.jpg") no-repeat center center fixed;
     -webkit-background-size: cover; /* For WebKit*/
     -moz-background-size: cover;    /* Mozilla*/
     -o-background-size: cover;      /* Opera*/
     background-size: cover;         /* Generic*/
+    height: 100%;
+    overflow: hidden;
 }
+body {
+    background: none;
+    height:100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Special Elite', serif;
 }
@@ -42,12 +52,13 @@ nav {
 
 }
 nav .logo {
-    background: url("../../main_site/img/logo.png");
-    width: 0px;
-    height: 0px;
+    background: url("../../main_site/img/logo_watermark.png");
+    width: 120px;
+    height: 120px;
     left: 0;
     top: 0;
     position: fixed;
+    opacity: 0.8;
 }
 .logo_watermark {
     background: url("../../main_site/img/logo_watermark.png");
