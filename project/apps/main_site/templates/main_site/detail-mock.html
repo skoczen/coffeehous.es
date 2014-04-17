@@ -38,6 +38,14 @@
 </div>
 
 <div class="bubble comments right_side floating">
+    <div class="convo_header">
+        <div class="convo_title">Conversation among:</div>
+        <div class="participants">
+            <div class="author" style="background-image: url('{{ STATIC_URL }}main_site/img/seriina.png');"></div>
+            <div class="author" style="background-image: url('{{ STATIC_URL }}main_site/img/steven.jpg');"></div>
+            <div class="visible_to">Visible to you and the 3 other people they both know.</div>
+        </div>
+    </div>
     <div class="comment">
         <div class="author" style="background-image: url('{{ STATIC_URL }}main_site/img/seriina.png');"></div>
         <div class="substance">Wow, that's different than I would have expected. I've always wondered.. do people who are depressed know that they're in that spot, and to take these steps?</div>
@@ -46,7 +54,9 @@
         <div class="author" style="background-image: url('{{ STATIC_URL }}main_site/img/steven.jpg');"></div>
         <div class="substance">Awesome question. For me, that's probably the hardest part, actually. Dunno if that's everyone - anyone else want to chime in?</div>
     </div>
-    <a class="button">Add your voice</a>
+    <div class="add_your_voice">
+        <a class="button">Add your voice</a>
+    </div>
 </div>
 
 <div class="new_conversation">
