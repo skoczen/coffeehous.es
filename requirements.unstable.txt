@@ -15,6 +15,7 @@ django-storages
 django-ses
 fabric
 gunicorn
+-e git+https://github.com/scholrly/neo4django/#egg=neo4django
 psycopg2
 south
 splinter

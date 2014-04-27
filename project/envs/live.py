@@ -19,6 +19,24 @@ FAVICON_URL = "%sfavicon.ico" % STATIC_URL
 CACHES = memcacheify()
 DATABASES = None
 DATABASES = postgresify()
+NEO4J_URL = os.environ["GRAPHENEDB_URL"]
+
+# Ugh.  Someone has to have solved this *much* better
+NEO4J_USER = NEO4J_URL.split("//")[1].split(":")[0]
+NEO4J_PASSWORD = NEO4J_URL.split("//")[1].split(":")[1].split("@")
+NEO4J_HOST = NEO4J_URL.split("@")[1].split(":")[0]
+NEO4J_PORT = NEO4J_URL.split("@")[1].split(":")[1]
+
+NEO4J_DATABASES = {
+    'default': {
+        'HOST': NEO4J_HOST,
+        'PORT': NEO4J_PORT,
+        'ENDPOINT': '/',
+        'USER': NEO4J_USER,
+        'PASSWORD': NEO4J_PASSWORD,
+    }
+}
+
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATICFILES_STORAGE = "backends.CachedS3BotoStorage"
 COMPRESS_STORAGE = STATICFILES_STORAGE
