@@ -29,7 +29,7 @@ ecdsa==0.11
 gunicorn==18.0
 kombu==3.0.14
 lucene-querybuilder==0.2
-neo4django==0.1.8
+-e git+https://github.com/scholrly/neo4django/@5a3804f3608c6383f61e1da8a6d4f6604dfe07fc#egg=neo4django-master
 neo4jrestclient==2.0.2
 nose==1.3.1
 paramiko==1.12.3
